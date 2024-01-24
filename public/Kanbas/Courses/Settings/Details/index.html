@@ -1,0 +1,180 @@
+<table width="100%" border="1">
+    <tr>
+      <td valign="top">
+        <ul>
+          <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
+          <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
+          <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+        </ul>
+      </td>
+      <td valign="top">
+        <ul>
+          <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+          <li><a href="/Kanbas/Courses/Modules/index.html">Modules</a></li>
+          <li>
+            <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+          </li>
+          <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+        </ul>
+      </td>
+      <td valign="top">
+        <h2>Course Details</h2>
+        <label>Image:</label>
+        <label for="text-field-name">Course Name:</label>
+        <input type="text"
+                id="text-field-name"
+                placeholder="Course Name"
+                value="CS5610 07 Web Development Spring 2024"/><br/>
+        <label for="text-field-code">Course Code:</label>
+        <input type="text"
+                id="text-field-code"
+                placeholder="Course Code"
+                value="CS5610.07.12345"/><br/>
+        <label for="text-field-blueprint">Blueprint Course:</label>
+        <input type="text"
+                id="text-field-blueprint"
+                placeholder="Blueprint Course"
+                value="No"/><br/>
+
+        <label>Course Template:</label>
+        <input type="checkbox"
+                value="Enable course as a Course Template"
+                name="check-template"
+                id="chkbox-template"/>
+        <label for="chkbox-template">Enable course as a Course Template</label><br/>
+
+        <label for="select-time-zone">Time Zone:</label>
+        <select id="select-time-zone">
+            <option selected value="Eastern Time(US & Canada)(-5:00/-4:00)">Eastern Time(US & Canada)(-5:00/-4:00)</option>
+            <option value="Pacific Time(US & Canada)(-8:00/-7:00)">Pacific Time(US & Canada)(-8:00/-7:00)</option>
+        </select><br/>
+
+        <label for="text-field-SIS">SIS ID:</label>
+        <input type="text"
+                id="text-field-SIS"
+                placeholder="SIS ID"
+                value="CS5610.07.12345"/><br/>
+
+        <label for="text-field-subaccount">Subaccount:</label>
+        <input type="text"
+                id="text-field-subaccount"
+                placeholder="Subaccount"
+                value="CS Grad"/><br/>
+        <label for="text-field-term">Term:</label>
+        <input type="text"
+                id="text-field-term"
+                placeholder="Term"
+                value="202410_1 Spring 2024 Semester Full Term"/><br/>
+
+        <label for="select-praticipation">Paticipation:</label>
+        <select id="select-participation">
+            <option selected value="Term">Term</option>
+            <option value="Quarter">Quarter</option>
+        </select><br/>
+        Course participation is limited to term start and end dates.<br/>
+        <label for="text-fields-start"> Start: </label><br/>
+        <input type="date"
+      id="text-fields-dob"
+            value="2024-01-08"/><br/>
+        <label for="text-fields-end"> End: </label><br/>
+        <input type="date"
+            id="text-fields-end"
+            value="2024-05-31"/><br/>
+
+        <input type="checkbox"
+                value="Restrict students from viewing course before term start date"
+                name="check-start"
+                id="chkbox-start"
+            />
+        <label for="chkbox-start">Restrict students from viewing course before term start date</label>
+        <br/>
+        <input type="checkbox"
+                value="Restrict students from viewing course after term end date"
+                name="check-end"
+                id="chkbox-end"
+            />
+        <label for="chkbox-end">Restrict students from viewing course after term end date</label><br/>
+
+
+        <label for="select-one-due">Default due time:</label>
+        <select id="select-one-due">
+            <option selected value="Account default(11:59pm)">Account default(11:59pm)</option>
+            <option value="Noon(11:59am)">Noon(11:59am)</option>
+        </select><br/>
+
+        <label for="select-one-language">Language:</label>
+        <select id="select-one-language">
+            <option selected value="Not set(user-configurable), defaults to English, United States">Not set(user-configurable), defaults to English, United States</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Spanish">Spanish</option>
+        </select><br/>
+
+        <label for="text-field-storage">File Storage:</label>
+        <input type="text"
+                id="text-field-storage"
+                placeholder="File storage"
+                value="10000 magabytes"/><br/>
+
+        
+        <label>Large Course:</label>
+        <input type="checkbox"
+                value="Launch SpeedGrader Filtered by Student Group"
+                name="check-large"
+                id="chkbox-large"/>
+        <label for="chkbox-large">Launch SpeedGrader Filtered by Student Group</label><br/>
+
+        <label>Grading Scheme:</label>
+        <input type="checkbox"
+                value="Enable course grading scheme"
+                name="check-scheme"
+                id="chkbox-scheme"/>
+        <label for="chkbox-scheme">Enable course grading scheme</label><br/>
+
+        <label for="select-one-license">License:</label>
+        <select id="select-one-license">
+            <option selected value="Private (Copyright)">Private (Copyright)</option>
+            <option value="Public (Copyright)">Public (Copyright)</option>
+        </select><br/>
+
+        <label>File Copyroght:</label>
+        <input type="checkbox"
+                value="Copyright and license information must be provided for files before they are published."
+                name="check-copyright"
+                id="chkbox-copyright"/>
+        <label for="chkbox-copyright">Copyright and license information must be provided for files before they are published.</label><br/>
+
+        <label for="select-visibility">Visibility: if you need to make your course public, please contact your administrator/support.</label>
+        <select id="select-visibility">
+            <option selected value="Course">Course</option>
+            <option value="Other">Course</option>
+        </select><br/>
+
+        <input type="checkbox"
+                value="Include this course in the public course index"
+                name="checkbox-include"
+                id="chkbox-include"/>
+        <label for="chkbox-include">Include this course in the public course index</label><br/>
+
+        <label for="select-format">Format:</label>
+        <select id="select-format">
+            <option selected value="On-Campus">On-Campus</option>
+            <option value="Online">Online</option>
+        </select><br/>
+
+        <label for="check-path">Mastery Paths</label>
+        <input type="checkbox"
+                value="Enable individual learning paths for students based on assesment"
+                name="check-path"
+                id="chkbox-path"/>
+        <label for="chkbox-path">Enable individual learning paths for students based on assesment</label><br/>
+
+        <form id="textarea">
+            <label>Description:</label><br/>
+            <textarea cols="30" rows="10">Now empty</textarea>
+        </form>
+
+        <button><a href="/Kanbas/Courses/Home/screen.html">Update Course Details</button>
+
+      </td>
+    </tr>
+  </table>

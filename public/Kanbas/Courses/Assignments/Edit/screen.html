@@ -1,0 +1,98 @@
+<table>
+    <tr>
+      <td valign="top">
+        <ul>
+          <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+        </ul>
+      </td>
+      <td valign="top">
+        <ul>
+          <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+          <li><a href="/Kanbas/Courses/Modules/index.html">Modules</a></li>
+          <li>
+            <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+          </li>
+          <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+        </ul>
+      </td>
+
+      <!-- Added drop drown as shown on Figure3.3.4 -->
+      <select>
+        <option>SpeedGrader</option>
+        <option>Other</option>
+      </select>
+      <td valign="top">
+        <label for="assignmentName">Assignment Name</label> <br />
+        <input
+          type="text"
+          value="A1 - ENV+HTML"
+          id="assignmentName"
+          placeholder="Assignment Name"
+        />
+        <h3>Description</h3>
+        <textarea cols="50" rows="5">
+          This is the first assignment to build Kanbas
+        </textarea>
+  
+        <h3>Points</h3>
+        <input value="100" type="number" max="100" min="50" step="5" />
+
+        <h3>Assignment Group</h3>
+        <select>
+          <option>ASSIGNMENTS</option>
+          <option>QUIZZES</option>
+          <option>EXAMS</option>
+          <option>PROJECTS</option>
+        </select>
+
+        <h3>Display Grade as</h3>
+        <select>
+          <option>Percentage</option>
+          <option>Point</option>
+        </select>
+
+        <h3>Submission Type</h3>
+        <select>
+          <option>Online</option>
+          <option>Physical</option>
+        </select>
+  
+        <h3>Online Entry Options</h3>
+
+        <input type="checkbox" id="textEntry" />
+        <label for="textEntry">Text Entry</label><br />
+
+        <input type="checkbox" id="websiteURL"checked />
+        <label for="websiteURL">Website URL</label><br />
+
+        <<input type="checkbox" id="media"/>
+        <label for="media">Media Recordings</label><br />
+
+        <input type="checkbox" id="annotation"/>
+        <label for="annotation">Students Annotation</label><br />
+
+        <input type="checkbox" id="file" />
+        <label for="file">File Uploads</label><br />
+  
+  
+        <h3>Assign to</h3>
+        <input type="text"
+        value="Everyone"
+        id="assignTo"
+        placeholder="Assign to"><br />
+  
+        <h3>Due</h3>
+        <input type="date" value="2021-01-01"/>
+  
+        <h3>Available from</h3>
+        <input type="date" value="2020-12-28"/>
+        <h3>Until</h3>
+        <input type="date" value="2021-01-05"/>
+
+        <button><a href="/Kanbas/Courses/Assignments/screen.html">Cancel</a></button>
+        <button><a href="/Kanbas/Courses/Assignments/screen.html">Save</a></button>
+      </td>
+    </tr>
+  </table>
