@@ -3,18 +3,35 @@
       <td valign="top">
         <ul>
           <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-          <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
+          <li><a href="#">Dashboard</a></li>
           <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Inbox</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Studio</a></li>
+          <li><a href="#">Commons</a></li>
+          <li><a href="#">Help</a></li>
         </ul>
       </td>
       <td valign="top">
         <ul>
-          <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-          <li><a href="/Kanbas/Courses/Modules/index.html">Modules</a></li>
-          <li>
-            <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
-          </li>
-          <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+            <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+            <li><a href="/Kanbas/Courses/Modules/index.html">Modules</a></li>
+            <li><a href="/Kanbas/Courses/Piazza/index.html">Piazza</a></li>
+            <li><a href="#">Zoom Meetings</a></li>
+            <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+            <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Panopto Video</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Rubrics</a></li>
+            <li><a href="#">Outcomes</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="/Kanbas/Courses/Settings/Details/index.html">Settings</a></li>
         </ul>
       </td>
       <td valign="top">
@@ -27,32 +44,25 @@
           <option>Export</option>
           <option>UnPublish</option>
         </select>
-        <button>Configure</button>
+        <button>Configure</button><br/>
   
-        <table width="100%">
-          <tbody>
-            <tr>
-              <td>
-                Student Names<br />
-                <input
-                  title="Type the name of the student to search for"
-                  placeholder="Search Students"
-                />
-              </td>
-              <td>
-                Assignment Names<br />
-                <input 
-                    title="Type the name of the assignment to search for"
-                    placeholdr="Search Assignments"
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
 
+        <h3>Student Names</h3>
+        <input
+            title="Type the name of the student to search for"
+            placeholder="Search Students"
+        /><br/>
+
+        <h3>Assignment Names</h3>
+        <input 
+            title="Type the name of the assignment to search for"
+            placeholder="Search Assignments"
+        /><br/>
+      
+        <br/>
         <button>Apply Filters</button>
   
-        <table width="100%">
+        <table width="100%" border="1">
           <thead>
             <tr>
               <th>Student Name</th>
@@ -65,79 +75,68 @@
               <th>A7 - REDUX Out of 100</th>
               <th>A8 - NODE Out of 100</th>
               <th>A9 - MongoDB Out of 100</th>
-              <th>Q1</th>
-              <th>Q2</th>
-              <th>Q3</th>
-              <th>Q4</th>
-              <th>Q5</th>
-              <th>Q6</th>
-              <th>Exam 1</th>
-              <th>Exam 2</th>
+
 
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Alice Wonderland</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-
+              <td><input id="number"
+                value="89"></td>
+              <td>100</td>
+              <td>98</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
             </tr>
             <tr>
               <td>Bob Builder</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+              <td><input id="number"
+                value="82"></td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+ 
             </tr>
             <tr>
               <td>Charlie Chaplin</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
+              <td>100</td>
+              <td><input id="number"
+                value="89"></td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+    
             </tr>
+
+            <tr>
+                <td>Princess Leia</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td><input id="number"
+                    value="90"></td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>90</td>
+      
+              </tr>
+
           </tbody>
         </table>
       </td>
