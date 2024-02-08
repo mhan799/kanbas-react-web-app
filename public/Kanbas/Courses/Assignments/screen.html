@@ -1,39 +1,167 @@
-<table border="1" width="100%">
-    <tr>
-      <td valign="top">
-        <ul>
-            <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-        </ul>
-      </td>
-      <td valign="top">
-        <ul>
-            <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-            <li><a href="/Kanbas/Courses/Modules/index.html">Modules</a></li>
-            <li><a href="/Kanbas/Courses/Piazza/index.html">Piazza</a></li>
-            <li><a href="#">Zoom Meetings</a></li>
+<html>
+    <head>
+        <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />  
+        <link rel="stylesheet" href="/Kanbas/Courses/Assignments/style.css" />  
+
+        <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+        <link rel="stylesheet" href="/Kanbas/styles.css" />
+        <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+        <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+        <link href="../../libs/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <ul class="breadcrumb">
+            <li><a href="/Kanbas/Courses/Home/screen.html">CS5610-SP24-07</a></li>
             <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-            <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Panopto Video</a></li>
-            <li><a href="#">Discussions</a></li>
-            <li><a href="#">Announcements</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Rubrics</a></li>
-            <li><a href="#">Outcomes</a></li>
-            <li><a href="#">Collaborations</a></li>
-            <li><a href="#">Syllabus</a></li>
-            <li><a href="/Kanbas/Courses/Settings/Details/index.html">Settings</a></li>
-        </ul>
-      </td>
+        </ul>  
+        <div class="d-flex">  
+            <div class="d-none d-md-block">
+                <ul class="wd-kanbas-navigation">
+                  <li><a href="http://northeastern.edu">N</a></li>
+                    <li><a href="/Kanbas/Account/Profile/screen.html"><i class="fa fa-user" style="color: white"></i> Account</a></li>
+                    <li><a href="/Kanbas/Dashboard/screen.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+                    <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html"><i class="fa fa-book"></i> Courses</a></li>
+                    <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
+                    <li><a href="#"><i class="fa fa-inbox"></i><br/> Inbox</a></li>
+                    <li><a href="#"><i class="fa fa-clock-o"></i> History</a></li>
+                    <li><a href="#"><i class="fa fa-desktop"></i>Studio</a></li>
+                    <!-- <li><a href="#">Commons</a></li> -->
+                    <li><a href="#"><i class="fa fa-question-circle"></i><br/> Help</a></li>
+                </ul>
+              </div>
+              <div class="d-none d-md-block">
+                <ul class="wd-navigation">
+                  <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                  <li><a href="/Kanbas/Courses/Modules/index.html">Modules</a></li>
+                  <li><a href="http://piazza.com">Piazza</a></li>
+                  <li><a href="#">Zoom</a></li>
+                  <li class="wd-active"><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                  <li><a href="#">Quizzes</a></li>
+                  <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                  <li><a href="#">People</a></li>
+                  <li><a href="/Kanbas/Courses/Settings/Details/index.html">Settings</a></li>
+                </ul>
+            </div>
+
+              <div class="flex-fill">
+                <div>
+                <input
+                    class="form-control w-25"
+                    title="Type the name of the assignment to search for"
+                    placeholder="Search for Assignment"
+                />
+                <span class="float-end">
+                    <button>+ Group</button>
+                    <button class="red-button">+ Assignment</button>
+                    <button class="custom-button"><i class="fa fa-ellipsis-v"></i></button>
+                  </span>
+                </div>
+
+                <hr/>
+
+                <ul class="list-group wd-title">
+                    <li class="list-group-item">
+                        <div>
+                          <i class="fa fa-ellipsis-v"></i> Assignments - 40% of total
+                          <span class="float-end">
+                            <i class="fa fa-plus ms-2"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                          </span>
+                        </div>
+                </ul>
+
+
+                <div class="flex-fill">
+                    <ul class="list-group wd-assignment">
+                        <li class="list-group-item">
+                          <i class="fa fa-ellipsis-v"></i>    
+                          <!-- <i class="fa fa-pencil-square-o"></i>  -->
+                           <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A1 SETUP</a><br/>
+                          <span class="text-muted">Due Date: 2024-03-15 | </span>
+                          <span class="text-muted">Start time: 2024-03-10 | </span>
+                          <span class="text-muted">Points: 100</span>
+                          <span class="float-end">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                          </span>
+                          
+                        </li>
+                      </ul>
+                      <ul class="list-group wd-assignment">
+                        <li class="list-group-item">
+                          <i class="fa fa-ellipsis-v"></i> <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A2 HTML</a><br/>
+                          <span class="text-muted">Due Date: 2024-03-15 | </span>
+                          <span class="text-muted">Start time: 2024-03-10 | </span>
+                          <span class="text-muted">Points: 100</span>
+                          <span class="float-end">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                          </span>
+                        </li>
+                      </ul>
+                      <ul class="list-group wd-assignment">
+                        <li class="list-group-item">
+                          <i class="fa fa-ellipsis-v"></i> <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A3 CSS</a><br/>
+                          <span class="text-muted">Due Date: 2024-03-15 | </span>
+                          <span class="text-muted">Start time: 2024-03-10 | </span>
+                          <span class="text-muted">Points: 100</span>
+                          <span class="float-end">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                          </span>
+                        </li>
+                      </ul>
+                      <ul class="list-group wd-assignment">
+                        <li class="list-group-item">
+                          <i class="fa fa-ellipsis-v"></i> <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A4 BOOTSTRAP</a><br/>
+                          <span class="text-muted">Due Date: 2024-03-15 | </span>
+                          <span class="text-muted">Start time: 2024-03-10 | </span>
+                          <span class="text-muted">Points: 100</span>
+                          <span class="float-end">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                          </span>
+                        </li>
+                      </ul>
+                      <ul class="list-group wd-assignment">
+                        <li class="list-group-item">
+                          <i class="fa fa-ellipsis-v"></i> <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A5 JAVASCRIPT</a><br/>
+                          <span class="text-muted">Due Date: 2024-03-15 | </span>
+                          <span class="text-muted">Start time: 2024-03-10 | </span>
+                          <span class="text-muted">Points: 100</span>
+                          <span class="float-end">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                          </span>
+                        </li>
+                      </ul>
+                      <ul class="list-group wd-assignment">
+                        <li class="list-group-item">
+                          <i class="fa fa-ellipsis-v"></i> <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A6 REACT</a><br/>
+                          <span class="text-muted">Due Date: 2024-03-15 | </span>
+                          <span class="text-muted">Start time: 2024-03-10 | </span>
+                          <span class="text-muted">Points: 100</span>
+                          <span class="float-end">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                          </span>
+                        </li>
+                      </ul>
+                    </div> 
+                    </ul>
+                </div> 
+                
+
+              </div>
+
+        </div>
+    </body>
+
+<!-- 
       <td valign="top">
         <label for="assignmentName">Assignment Name</label> 
         <input
@@ -88,7 +216,7 @@
                         <li><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q3-JS+REACTL</a></li>
                         <li><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q4-STATE+REDUX</a></li>
                         <li><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q5-NODE+SESSION</a></li>
-                        <li><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q56-MONGO+MONGOOSE</a></li>
+                        <li><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q6-MONGO+MONGOOSE</a></li>
                     </ul>
                 </tr>
                 <tr>
@@ -133,4 +261,5 @@
 
       </td>
     </tr>
-</table>
+</table> -->
+</html>

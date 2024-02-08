@@ -1,0 +1,81 @@
+.list-group {
+  border-radius: 0% !important;
+}
+.list-group-item{
+  border-radius: 0% !important;
+}
+.wd-title,
+.wd-title * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-title {
+  margin: 5px;
+}
+
+.wd-title > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+}
+
+.wd-title > li > div {
+  padding: 6px;
+  /* border-left: 1px solid gray !important; */
+}
+
+.wd-assignment,
+.wd-assignment * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-assignment {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.wd-assignment >li {
+  border: 1px solid lightgray !important;
+  border-left: 3px solid green !important;
+}
+
+.custom-button {
+    width: 20px; 
+    height: 30px; 
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: ">";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }

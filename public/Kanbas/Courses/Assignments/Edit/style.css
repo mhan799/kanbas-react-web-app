@@ -1,0 +1,65 @@
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+  
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: ">";
+}
+  
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+  
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+.custom-button {
+    margin: 5px;
+    width: 30px; 
+    height: 30px; 
+    border-color: lightgray;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.wd-edit,
+.wd-edit * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-edit {
+  margin: 14px;
+  border: 1px solid lightgray !important;
+  border-radius: 5px;
+}
+
+.wd-edit > li {
+  background-color: white;
+  border: none !important;
+}
+
+.wd-edit > li > div {
+  padding: 6px;
+  /* border-left: 1px solid gray !important; */
+}
+
+.red-button {
+    background-color: yellow;
+    color: white;
+}
+
+
+
