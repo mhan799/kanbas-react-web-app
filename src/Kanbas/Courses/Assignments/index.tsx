@@ -1,16 +1,46 @@
 import React from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
+import db from "../../Database";
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addAssignment,
+    deleteAssignment,
+    updateAssignment,
+    setAssignment,
+  } from "./reducer";
+import { KanbasState } from "../../store";
 
 
 function Assignments() {
-  const { courseId } = useParams();
-  const assignmentList = assignments.filter(
-    (assignment) => assignment.course === courseId);
+    const { courseId } = useParams();
+//   const assignmentList = db.assignments.filter(
+//     (assignment) => assignment.course === courseId);
+    const assignments = useSelector((state: KanbasState) => 
+        state.assignmentsReducer.assignments);
+    const assignment = useSelector((state: KanbasState) => 
+        state.assignmentsReducer.assignment);
+    const dispatch = useDispatch();
+    const [assignmentToDelete, setAssignmentToDelete] = useState(null); 
+    const [showDialog, setShowDialog] = useState(false); 
+    const handleDelete = (id: any) => {
+        setShowDialog(true);
+        setAssignmentToDelete(id);
+    };
+  const handleConfirmDelete = () => { 
+    dispatch(deleteAssignment(assignmentToDelete));
+    console.log(assignmentToDelete);
+    setShowDialog(false);
+    setAssignmentToDelete(null);
+  };
+  const handleCancelDelete = () => {
+    setShowDialog(false);
+    setAssignmentToDelete(null);
+  };
+
   return (
     <>
-      {/* Add buttons and other fields here */}
       <div>
         <input
         title="Type the name of the assignment to search for"
@@ -18,14 +48,11 @@ function Assignments() {
         />
         <span className="float-end">
         <button>+ Group</button>
-        <button>+ Assignment</button>
+        <Link to="./AssignmentEditor"><button>+ Assignment</button></Link>
         <button><FaEllipsisV className="me-2" /></button>
         </span>
-    </div>      
-   
-
-
-      <ul className="list-group wd-modules">
+    </div>  
+      <ul className="list-group">
         <li className="list-group-item">
           <div>
             <FaEllipsisV className="me-2" /> ASSIGNMENTS
@@ -35,22 +62,46 @@ function Assignments() {
             </span>
           </div>
           <ul className="list-group">
-            {assignmentList.map((assignment) => (
-              <li className="list-group-item">
+            {assignments.filter((assignment) => assignment.course === courseId)
+            .map((assignment, index) => (
+            <li key={index} className="list-group-item">
                 <FaEllipsisV className="me-2" />
-                <Link
-                   to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>{assignment.title}</Link>
-                   <br/>
-                <span className="text-muted">Due Date: 2024-03-15 | </span>
-                          <span className="text-muted">Start time: 2024-03-10 | </span>
-                          <span className="text-muted">Points: 100</span>
-                <span className="float-end">
-                  <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>
-              </li>))}
+                <Link onClick={() => dispatch(setAssignment(assignment))}
+                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>{assignment.title}</Link>
+                <span className="float-end" >
+                    <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" />
+                    
+                    <button
+                        onClick={() => handleDelete(assignment._id)}
+                        //onClick={() => dispatch(deleteAssignment(assignment._id))}
+                    >
+                        Delete
+                    </button>
+                </span>
+
+            </li>
+            ))}       
           </ul>
         </li>
       </ul>
+      {/* Delete dialog */}
+      {showDialog && (
+        <div>
+          <p>Are you sure you want to remove the assignment?</p>
+          <button onClick={handleConfirmDelete}>Yes</button>
+          <button onClick={handleCancelDelete}>No</button>
+        </div>
+      )}
+      {/* {assignmentToDelete && (
+                <div>
+                    <p>Are you sure you want to remove the assignment?</p>
+                    <button onClick={handleConfirmDelete}>Yes</button>
+                    <button onClick={handleCancelDelete}>No</button>
+                </div>
+            )} */}
+
     </>
-);}
+  )
+}
 export default Assignments;
 
